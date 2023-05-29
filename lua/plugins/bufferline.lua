@@ -2,25 +2,13 @@ return {
 	"akinsho/bufferline.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons", "glepnir/lspsaga.nvim" },
 	config = function()
-		local highlights
-		if os.getenv("GTK_THEME") == "Nordic" then
-			highlights = require("nord").bufferline.highlights({
-				italic = true,
-				bold = true,
-			})
-		elseif
-			os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink" or os.getenv("GTK_THEME") == "Catppuccin-Latte-Green"
-		then
-			highlights = require("catppuccin.groups.integrations.bufferline").get()
-		end
 		require("bufferline").setup({
-			highlights = highlights,
 			options = {
 				mode = "buffers", -- set to "tabs" to only show tabpages instead
 				numbers = "buffer_id",
 				--number_style = "superscript" | "subscript" | "" | { "none", "subscript" }, -- buffer_id at index 1, ordinal at index 2
 				close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
-				--[[ indicator_style = "▎", ]]
+				indicator_style = "▎",
 				buffer_close_icon = "",
 				modified_icon = "●",
 				close_icon = "",
