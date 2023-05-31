@@ -20,7 +20,7 @@ return {
 
 				prompt_prefix = " ",
 				selection_caret = " ",
-				path_display = { "smart" },
+				path_display = { "truncate" },
 				color_devicons = true,
 				sorting_strategy = "ascending",
 				layout_config = {
@@ -67,6 +67,7 @@ return {
 						["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 						["<C-l>"] = actions.complete_tag,
 						["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+						["<esc>"] = actions.close,
 					},
 
 					n = {

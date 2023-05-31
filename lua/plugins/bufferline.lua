@@ -20,7 +20,7 @@ return {
 				diagnostics = false,
 				diagnostics_update_in_insert = false,
 				offsets = {
-					{ filetype = "NvimTree", text = "File Explorer", highlight = "Directory", text_align = "left" },
+					{ filetype = "NvimTree", text = " ", highlight = "Directory", text_align = "left" },
 				},
 				show_buffer_icons = true, -- disable filetype icons for buffers
 				show_buffer_close_icons = true,
