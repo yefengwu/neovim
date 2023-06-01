@@ -3,8 +3,9 @@ return {
 	keys = {
 		{ "<A-p>", "<cmd>Telescope<CR>", desc = "telescope" },
 		{ "<Leader>f", "<cmd>Telescope find_files<CR>", desc = "telescope" },
+		{ "<Leader>p", "<cmd>Telescope project<CR>", desc = "telescope" },
 	},
-	dependencies = { "nvim-telescope/telescope-media-files.nvim" },
+	dependencies = { "nvim-telescope/telescope-media-files.nvim", "nvim-telescope/telescope-project.nvim" },
 	config = function()
 		local status_ok, telescope = pcall(require, "telescope")
 		if not status_ok then
@@ -12,8 +13,10 @@ return {
 		end
 
 		telescope.load_extension("media_files")
+		telescope.load_extension("project")
 
 		local actions = require("telescope.actions")
+		local project_actions = require("telescope._extensions.project.actions")
 
 		telescope.setup({
 			defaults = {
@@ -119,6 +122,19 @@ return {
 					-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
 					filetypes = { "png", "webp", "jpg", "jpeg", "mp4", "pdf", "webm" },
 					find_cmd = "rg", -- find command (defaults to `fd`)
+				},
+				project = {
+					hidden_files = false, -- default: false
+					theme = "dropdown",
+					order_by = "asc",
+					search_by = "title",
+					sync_with_nvim_tree = true, -- default false
+					-- default for on_project_selected = find project files
+					on_project_selected = function(prompt_bufnr)
+						-- Do anything you want in here. For example:
+						project_actions.change_working_directory(prompt_bufnr, false)
+						require("harpoon.ui").nav_file(1)
+					end,
 				},
 				-- Your extension configuration goes here:
 				-- extension_name = {
