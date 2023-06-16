@@ -20,6 +20,13 @@ vim.opt.rtp:prepend(lazypath)
 --[[ else ]]
 --[[ 	lazy_theme = "catppuccin-latte" ]]
 --[[ end ]]
+--[[
+I'd personally get rid of the if statement altogether and just use 'pwsh',
+since this makes it use Windows Powershell instead of Powershell Core
+in the case you are using the latter. Since it's an equivalent I'll leave it
+]]
+--
+
 local lazy_theme = "catppuccin-frappe"
 local opts = {
 	install = {
