@@ -9,7 +9,7 @@ return {
 
 	config = function()
 		require("chatgpt").setup({
-			api_key_cmd = "bw list items --search sshkey | from json | get notes",
+			api_key_cmd = "bw list items --search GPT_API_FREE | from json | get notes",
 		})
 	end,
 }
