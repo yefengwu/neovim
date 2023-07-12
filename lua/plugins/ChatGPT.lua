@@ -6,6 +6,9 @@ return {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope.nvim",
 	},
+	keys = {
+		{ "<Leader>y", "<cmd>:ChatGPT<CR>", desc = "ChatGPT" },
+	},
 
 	config = function()
 		require("chatgpt").setup({
