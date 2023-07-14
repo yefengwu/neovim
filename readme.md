@@ -1,8 +1,21 @@
-# franknvim
-
 ## Installation
 
+### linux
+
+```bash
+git clone git@github.com:yefengwu/neovim.git $HOME/.config /nvim
+
+```
+
+### Win
+
+```nushell
+git clone git@github.com:yefengwu/neovim.git $HOME\AppData\Local\nvim
+
+```
+
 ## Usage
+
 ### Keymappings
 
 #### Buffers
