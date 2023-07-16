@@ -18,7 +18,7 @@ return {
 				dash_string = "-",
 				quote_highlight = "Quote",
 				quote_string = "┃",
-				fat_headlines = true,
+				fat_headlines = false,
 				fat_headline_upper_string = "",
 				fat_headline_lower_string = "",
 			},

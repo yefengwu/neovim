@@ -83,7 +83,7 @@ return {
 			commands = {},
 			window = {
 				position = "float",
-				width = 40,
+				width = 30,
 				mapping_options = {
 					noremap = true,
 					nowait = true,
