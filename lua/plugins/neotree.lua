@@ -6,7 +6,7 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	keys = {
-		{ "<leader>e", "<cmd>NeoTreeFloat<CR>", desc = "Neotree" },
+		{ "<leader>e", "<cmd>Neotree<CR>", desc = "Neotree" },
 	},
 
 	config = function()
@@ -95,6 +95,7 @@ return {
 					},
 					["<2-LeftMouse>"] = "open",
 					["<cr>"] = "open",
+					["o"] = "open",
 					["<esc>"] = "revert_preview",
 					["P"] = { "toggle_preview", config = { use_float = true } },
 					["l"] = "focus_preview",
@@ -165,7 +166,11 @@ return {
 						--".null-ls_*",
 					},
 				},
-				follow_current_file = false, -- This will find and focus the file in the active buffer every
+				follow_current_file = {
+					enabled = false, -- This will find and focus the file in the active buffer every time
+					--               -- the current file is changed while the tree is open.
+					leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
+				},
 				-- time the current file is changed while the tree is open.
 				group_empty_dirs = false, -- when true, empty folders will be grouped together
 				hijack_netrw_behavior = "open_default", -- netrw disabled, opening a directory opens neo-tree
@@ -200,8 +205,11 @@ return {
 				commands = {}, -- Add a custom command or override a global one using the same function name
 			},
 			buffers = {
-				follow_current_file = true, -- This will find and focus the file in the active buffer every
-				-- time the current file is changed while the tree is open.
+				follow_current_file = {
+					enabled = true, -- This will find and focus the file in the active buffer every time
+					--              -- the current file is changed while the tree is open.
+					leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
+				},
 				group_empty_dirs = true, -- when true, empty folders will be grouped together
 				show_unloaded = true,
 				window = {
