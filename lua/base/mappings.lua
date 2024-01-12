@@ -19,7 +19,7 @@ vim.o.timeoutlen = 200
 
 -- Better to save file & exit file --
 keymap("n", "Q", ":q<CR>", opts)
-keymap("n", "<leader>q", ":q!<CR>", opts)
+keymap("n", "<leader>q", ":qa!<CR>", opts)
 keymap("n", "<leader>w", ":w!<CR>", opts)
 keymap("n", "S", ":w<CR>", opts)
 

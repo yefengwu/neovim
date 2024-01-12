@@ -3,7 +3,7 @@
 ### linux
 
 ```bash
-git clone git@github.com:yefengwu/neovim.git $HOME/.config /nvim
+git clone https://github.com/yefengwu/neovim.git $HOME/.config/nvim
 
 ```
 
@@ -69,6 +69,5 @@ git clone git@github.com:yefengwu/neovim.git $HOME\AppData\Local\nvim
 | \<Leader>s | Telescope live_grep  | normal |
 | \<Leader>p | Telescope project    | normal |
 | \<A-p>     | Telescope commands   | normal |
-
 
 
