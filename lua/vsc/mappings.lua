@@ -13,9 +13,9 @@ keymap("n", "<leader>q", "<Cmd>call VSCodeNotify('workbench.action.closeActiveEd
 keymap("n", "<leader>e", "<Cmd>call VSCodeNotify('workbench.view.explorer')<Cr>", opts)
 keymap("n", "<leader>p", "<Cmd>call VSCodeNotify('workbench.action.showCommands')<Cr>", opts)
 keymap("n", "<leader>r", "<Cmd>call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<Cr>", opts)
+keymap("n", "<leader>v", "<C-v><Cr>", opts)
 
 -- vscode settings
-keymap("n", "<C-\\>", "<Cmd>call VSCodeNotify('workbench.action.terminal.toggleTerminal')<Cr>", opts)
 keymap("n", "<leader>ss", "<Cmd>call VSCodeNotify('workbench.action.openApplicationSettingsJson')<Cr>", opts)
 keymap("n", "<leader>sk", "<Cmd>call VSCodeNotify('workbench.action.openGlobalKeybindingsFile')<Cr>", opts)
 
