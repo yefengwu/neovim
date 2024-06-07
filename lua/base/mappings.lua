@@ -8,7 +8,7 @@ keymap("", "q", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.o.timeoutlen = 200
 
---[[ keymap("", "<leader>v", "<C-v>", opts) ]]
+keymap("", "<leader>v", "<C-v>", opts)
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
