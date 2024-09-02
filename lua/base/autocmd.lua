@@ -33,5 +33,5 @@ vim.cmd([[autocmd BufReadPost,FileReadPost * normal zR]])
 -- set bg transparent
 -- vim.cmd([[autocmd ColorScheme * highlight Normal guibg=NONE ctermbg=NONE]])
 --
-vim.cmd([[autocmd FileType yaml,lua setlocal ts=4 sts=4 sw=4 expandtab]]) 
+-- vim.cmd([[autocmd FileType yaml,lua setlocal ts=4 sts=4 sw=4 expandtab]])
 
