@@ -1,9 +1,5 @@
 return {
 	"simrat39/symbols-outline.nvim",
-	keys = {
-		{ "<Leader>r", "<cmd>:SymbolsOutline<CR>", desc = "SymbolsOutline" },
-	},
-
 	config = function()
 		local opts = {
 			highlight_hovered_item = true,

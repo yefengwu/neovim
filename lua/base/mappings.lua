@@ -8,7 +8,7 @@ keymap("", "q", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.o.timeoutlen = 200
 
-keymap("", "<leader>v", "<C-v>", opts)
+keymap("n", "<leader>v", "<C-v>", { desc = "visual_block_mode" })
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
@@ -18,9 +18,9 @@ keymap("", "<leader>v", "<C-v>", opts)
 --   command_mode = "c",
 
 -- Better to save file & exit file --
-keymap("n", "Q", ":q<CR>", opts)
-keymap("n", "<leader>q", ":q!<CR>", opts)
-keymap("n", "<leader>w", ":w!<CR>", opts)
+keymap("n", "Q", ":q<CR>", { desc = "quit" })
+keymap("n", "<leader>q", ":q!<CR>", { desc = "force quit" })
+keymap("n", "<leader>w", ":w!<CR>", { desc = "force save" })
 keymap("n", "S", ":w<CR>", opts)
 
 -- 'jk' key to exit insert mode --
@@ -38,7 +38,7 @@ keymap("n", "<TAB>", ":bnext<CR>", opts)
 keymap("n", "<S-TAB>", ":bprevious<CR>", opts)
 
 -- Buffer mappings
-keymap("n", "<Space>c", ":bd<CR>", opts)
+keymap("n", "<Space>c", ":bd<CR>", { desc = "close buffer" })
 keymap("n", "<Space>bn", ":BufferLineMoveNext<CR>", opts)
 keymap("n", "<Space>bp", ":BufferLineMovePrev<CR>", opts)
 
@@ -85,3 +85,5 @@ keymap("n", "N", "Nzz", opts)
 -- msic --
 keymap("n", "<C-u>", "5k", opts)
 keymap("n", "<C-d>", "5j", opts)
+
+keymap("n", "<leader>r", "<cmd>:SymbolsOutline<CR>", { desc = "Symbols Outline" })

@@ -1,6 +1,7 @@
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
+	dependencies = { "nvim-tree/nvim-web-devicons", "echasnovski/mini.icons" },
 	init = function()
 		vim.o.timeout = true
 		vim.o.timeoutlen = 300
@@ -9,5 +10,9 @@ return {
 		-- your configuration comes here
 		-- or leave it empty to use the default settings
 		-- refer to the configuration section below
+	},
+	icons = {
+		mappings = false,
+		ellipsis = false,
 	},
 }
