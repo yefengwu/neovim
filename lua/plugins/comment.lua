@@ -36,7 +36,8 @@ return {
 			---@type table
 			toggler = {
 				---Line-comment toggle keymap
-				line = "gcc",
+				--[[ line = "gcc", ]]
+				line = "<C-_>",
 				---Block-comment toggle keymap
 				block = "gbc",
 			},
