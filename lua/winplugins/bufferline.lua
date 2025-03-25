@@ -19,9 +19,9 @@ return {
 				-- tab_size = 21,
 				-- diagnostics = false,
 				-- diagnostics_update_in_insert = false,
-				-- offsets = {
-				-- 	{ filetype = "NvimTree", text = "", highlight = "Directory", text_align = "center" },
-				-- },
+				offsets = {
+					{ filetype = "NeoTree", text = "", highlight = "Directory", text_align = "center" },
+				},
 				-- show_buffer_icons = true, -- disable filetype icons for buffers
 				-- show_buffer_close_icons = true,
 				-- show_close_icon = true,
