@@ -87,3 +87,12 @@ keymap("n", "<C-u>", "5k", opts)
 keymap("n", "<C-d>", "5j", opts)
 
 keymap("n", "<leader>r", "<cmd>:SymbolsOutline<CR>", { desc = "Symbols Outline" })
+
+if vim.g.neovide then
+    vim.g.neovide_input_use_logo = 1
+    vim.api.nvim_set_keymap('', '<C-v>', '+p<CR>', { noremap = true, silent = true})
+    vim.api.nvim_set_keymap('!', '<C-v>', '<C-R>+', { noremap = true, silent = true})
+    vim.api.nvim_set_keymap('t', '<C-v>', '<C-R>+', { noremap = true, silent = true})
+    vim.api.nvim_set_keymap('v', '<C-v>', '<C-R>+', { noremap = true, silent = true})
+end
+

@@ -6,11 +6,6 @@ local function paste()
 	return { vim.fn.split(vim.fn.getreg(""), "\n"), vim.fn.getregtype("") }
 end
 
-vim.g.clipboard = {
-	name = "osc52",
-	copy = { ["+"] = copy, ["*"] = copy },
-	paste = { ["+"] = paste, ["*"] = paste },
-}
 
 local options = {
 	clipboard = "unnamedplus",
@@ -44,6 +39,16 @@ local options = {
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
+
+
+vim.g.neovide_position_animation_length = 0
+vim.g.neovide_cursor_animation_length = 0.00
+vim.g.neovide_cursor_trail_size = 0
+vim.g.neovide_cursor_animate_in_insert_mode = false
+vim.g.neovide_cursor_animate_command_line = false
+vim.g.neovide_scroll_animation_far_lines = 0
+vim.g.neovide_scroll_animation_length = 0.00
+
 
 -- autorun
 vim.api.nvim_set_keymap("n", ",r", ":lua CompileRunGcc()<CR>", { noremap = true })
