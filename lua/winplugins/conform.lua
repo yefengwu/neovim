@@ -9,6 +9,7 @@ return {
 				yaml = { "yamlfmt" },
 				-- Conform will run multiple formatters sequentially
 				go = { "goimports", "gofmt" },
+                json = {"jq", "deno"},
 				-- You can also customize some of the format options for the filetype
 				rust = { "rustfmt", lsp_format = "fallback" },
 				-- You can use a function here to determine the formatters dynamically

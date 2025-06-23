@@ -118,6 +118,10 @@ return {
 					find_cmd = "rg", -- find command (defaults to `fd`)
 				},
 				project = {
+                    base_dirs = {
+                        '~/',
+                        '~/Scripts',
+                    },
 					hidden_files = false, -- default: false
 					theme = "dropdown",
 					order_by = "asc",

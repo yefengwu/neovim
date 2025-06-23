@@ -30,7 +30,7 @@ return {
 				layout_config = {
 					prompt_position = "top",
 					horizontal = {
-						width_padding = 0.04,
+						width_padding = 1.04,
 						height_padding = 0.1,
 						preview_width = 0.6,
 					},
@@ -125,6 +125,9 @@ return {
 					find_cmd = "rg", -- find command (defaults to `fd`)
 				},
 				project = {
+                    base_dirs = {
+                        '~/',
+                    },
 					hidden_files = false, -- default: false
 					theme = "dropdown",
 					order_by = "asc",
