@@ -87,7 +87,27 @@ else
 	require("lazy").setup("plugins", opts)
 	vim.g.clipboard = {
 		name = "osc52",
-		copy = { ["+"] = copy, ["*"] = copy },
-		paste = { ["+"] = paste, ["*"] = paste },
+		copy = {
+			["+"] = function(lines, _)
+				require("osc52").copy(table.concat(lines, "\n"))
+			end,
+			["*"] = function(lines, _)
+				require("osc52").copy(table.concat(lines, "\n"))
+			end,
+		},
+		paste = {
+			["+"] = function()
+				return {}
+			end,
+			["*"] = function()
+				return {}
+			end,
+		},
 	}
+
+	--[[ vim.g.clipboard = { ]]
+	--[[ 	name = "osc52", ]]
+	--[[ 	copy = { ["+"] = copy, ["*"] = copy }, ]]
+	--[[ 	paste = { ["+"] = paste, ["*"] = paste }, ]]
+	--[[ } ]]
 end
