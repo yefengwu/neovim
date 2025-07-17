@@ -7,6 +7,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				yaml = { "yamlfmt" },
+				toml = { "taplo" },
 				-- Conform will run multiple formatters sequentially
 				go = { "goimports", "gofmt" },
 				-- You can also customize some of the format options for the filetype
