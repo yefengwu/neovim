@@ -97,10 +97,10 @@ else
 		},
 		paste = {
 			["+"] = function()
-				return {}
+				return require("osc52").paste()
 			end,
 			["*"] = function()
-				return {}
+				return require("osc52").paste()
 			end,
 		},
 	}

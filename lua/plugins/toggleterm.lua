@@ -7,6 +7,8 @@ return {
 			open_mapping = [[<c-\>]],
              --[[ on_create = fun(t: Terminal), ]]
             autochdir = false,
+            start_in_insert = true,
+            insert_mappings = false,
 			float_opts = {
 				border = "curved",
 				-- like `size`, width, height, row, and col can be a number or function which is passed the current terminal
