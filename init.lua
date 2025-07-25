@@ -104,6 +104,11 @@ else
 			end,
 		},
 	}
+	vim.filetype.add({
+		extension = {
+			mts = "typescript",
+		},
+	})
 
 	--[[ vim.g.clipboard = { ]]
 	--[[ 	name = "osc52", ]]

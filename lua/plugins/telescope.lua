@@ -6,7 +6,7 @@ return {
 		{ "<Leader>p", "<cmd>Telescope project<CR>", desc = "find project" },
 		{ "<Leader>s", "<cmd>Telescope live_grep<CR>", desc = "live grep" },
 	},
-	dependencies = { "nvim-telescope/telescope-media-files.nvim", "nvim-telescope/telescope-project.nvim" },
+	dependencies = { "nvim-telescope/telescope-media-files.nvim", "nvim-telescope/telescope-project.nvim", "nvim-telescope/telescope-symbols.nvim" },
 	config = function()
 		local status_ok, telescope = pcall(require, "telescope")
 		if not status_ok then

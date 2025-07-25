@@ -8,6 +8,7 @@ return {
 				lua = { "stylua" },
 				yaml = { "yamlfmt" },
 				toml = { "taplo" },
+				typescript = { "deno_fmt" },
 				-- Conform will run multiple formatters sequentially
 				go = { "goimports", "gofmt" },
 				-- You can also customize some of the format options for the filetype
@@ -25,6 +26,14 @@ return {
 				-- Use the "_" filetype to run formatters on filetypes that don't
 				-- have other formatters configured.
 				["_"] = { "trim_whitespace" },
+			},
+
+			formatters = {
+				deno_fmt = {
+					command = "deno",
+					args = { "fmt", "--quiet", "-" },
+					stdin = true,
+				},
 			},
 			-- Set this to change the default values when calling conform.format()
 			-- This will also affect the default values for format_on_save/format_after_save
